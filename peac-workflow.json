@@ -1,0 +1,26 @@
+{
+    "apiVersion": "opentestfactory.org/v1alpha1",
+    "kind": "Workflow",
+    "metadata": {
+        "name": "Simple Workflow"
+    },
+    "defaults": {
+        "runs-on":"ssh"
+    },
+    "jobs": {
+        "explicitJob": {
+            "runs-on":"ssh",
+            "generator":"tm.squashtest.org/tm.generator@v1",
+            "with": {
+                "testPlanUuid":"36eab2cc-043a-45e7-9c62-96a2a43536bc",
+                "testPlanType":"Iteration",
+                "squashTMUrl":"http://192.168.72.25:8090/squash",
+                "squashTMAutomatedServerLogin":"taserver",
+                "squashTMAutomatedServerPassword":"taserver",
+                "technologyLabels":{
+                    "cypress": ["ssh","linux","cypress"]
+                }
+            }
+        }
+    }
+}
