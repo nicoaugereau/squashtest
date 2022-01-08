@@ -1,19 +1,24 @@
 {
-  "name": "squashtest",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nicoaugereau/squashtest.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cypress": "^8.5.0"
-  }
+    "name": "squashtest",
+    "version": "1.0.0",
+    "description": "Cypress testing project and automation with Squashtest products",
+    "main": "index.js",
+    "scripts": {
+        "cypress:run": "npx cypress run",
+        "cypress:open": "npx cypress open"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nicoaugereau/squashtest.git"
+    },
+    "keywords": [],
+    "author": "Nicolas Augereau",
+    "license": "MIT",
+    "dependencies": {
+        "cypress": "^9.1.1",
+        "cypress-cucumber-preprocessor": "^4.3.0",
+        "cypress-file-upload": "^5.0.8",
+        "cypress-multi-reporters": "^1.5.0",
+        "mocha-junit-reporter": "^2.0.2"
+    }
 }
