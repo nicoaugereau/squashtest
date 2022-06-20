@@ -12,6 +12,8 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
+const { playwright } = require('../config/playwright')
+
 /**
  * @type {Cypress.PluginConfig}
  */
@@ -19,4 +21,19 @@
 module.exports = (on, config) => {
     // `on` is used to hook into various events Cypress emits
     // `config` is the resolved Cypress config
+
+    on('before:browser:launch', (browser = {}, launchOptions) => {
+        if (browser.family === 'webkit' && browser.name == 'safari') {
+            // auto open devtools
+            launchOptions.args.push('--auto-open-devtools-for-tabs')
+            const existing = launchOptions.args.find(arg => arg.slice(0, 23) === '--remote-debugging-port')
+            return launchOptions
+        }
+    })
+
+    on('task', {
+        async openPlaywright(options) {
+            return await playwright(options)
+        }
+    })
 }
