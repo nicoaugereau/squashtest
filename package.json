@@ -15,7 +15,7 @@
     "author": "Nicolas Augereau",
     "license": "MIT",
     "dependencies": {
-        "cypress": "^10.1.0",
+        "cypress": "^10.7.0",
         "cypress-cucumber-preprocessor": "^4.3.0",
         "cypress-file-upload": "^5.0.8",
         "cypress-multi-reporters": "^1.5.0",
