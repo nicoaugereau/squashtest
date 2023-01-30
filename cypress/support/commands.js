@@ -66,7 +66,7 @@ if (VISIT_DELAY > 0) {
 }
 const COMMAND_DELAY = Cypress.env('COMMAND_DELAY') || 0
 if (COMMAND_DELAY > 0) {
-    for (const command of ['click', 'trigger', 'type', 'clear', 'reload', 'contains']) {
+    for (const command of ['click', 'trigger', 'type', 'clear', 'reload']) {
         Cypress.Commands.overwrite(command, (originalFn, ...args) => {
             const origVal = originalFn(...args)
 
