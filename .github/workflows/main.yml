@@ -1,0 +1,21 @@
+# https://github.com/cypress-io/github-action
+name: Run Cypress tests
+run-name: ${{ github.actor }} is running Cypress tests
+on: [pull_request, closed]
+jobs:
+  cypress-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        #uses: ./
+        uses: cypress-io/github-action@v5 # use the explicit version number
+        run: npm ci
+        run: npm run cypress:run
