@@ -21,7 +21,7 @@ jobs:
       # and run all Cypress tests
       - name: Cypress install
         #uses: ./
-        uses: cypress-io/github-action@v5 # use the explicit version number
+        #uses: cypress-io/github-action@v5 # use the explicit version number
         run: npm ci
       - name: Cypress run
         run: npm run cypress:run
