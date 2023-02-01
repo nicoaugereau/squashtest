@@ -1,7 +1,12 @@
 # https://github.com/cypress-io/github-action
 name: Run Cypress tests
 run-name: ${{ github.actor }} is running Cypress tests
-on: [pull_request, closed]
+on:
+  push:
+    branches:
+      - 'master'
+  pull_request:
+  
 jobs:
   cypress-tests:
     runs-on: ubuntu-latest
