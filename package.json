@@ -17,13 +17,13 @@
     "license": "MIT",
     "dependencies": {
         "cypress": "^12.5.0",
-        "cypress-cucumber-preprocessor": "^4.3.0",
         "cypress-file-upload": "^5.0.8",
         "cypress-multi-reporters": "^1.5.0",
         "mocha-junit-reporter": "^2.0.2",
-        "playwright": "^1.17.2"
+        "playwright": "^1.30.0",
+        "typescript": "^4.9.5"
     },
     "devDependencies": {
-        "playwright-webkit": "^1.25.2"
+        "playwright-webkit": "^1.30.0"
     }
 }
