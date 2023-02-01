@@ -19,8 +19,9 @@ jobs:
           node-version: '16'
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Cypress run
+      - name: Cypress install
         #uses: ./
         uses: cypress-io/github-action@v5 # use the explicit version number
         run: npm ci
+      - name: Cypress run
         run: npm run cypress:run
